@@ -13,7 +13,7 @@ $(function() {
             eaten: newEat
         };
 
-        if(newEatState === true){
+        if(newEatState.eaten === false){
             // Send the DELETE request with REST API id's 
             $.ajax('/api/burgers/' + id, {
                 type: "DELETE"
