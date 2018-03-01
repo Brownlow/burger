@@ -16,10 +16,8 @@ $(function() {
         if(newEatState === true){
             // Send the DELETE request with REST API id's 
             $.ajax('/api/burgers/' + id, {
-                type: "DELETE",
-                data: newEatState
+                type: "DELETE"
             }).then(function(){
-            
                 // Reload the page to get the updated list
                 location.reload();
             });
@@ -29,7 +27,7 @@ $(function() {
                 type: "PUT",
                 data: newEatState
             }).then(function(){
-                console.log("changed sleep to", newEat);
+                
             
                 // Reload the page to get the updated list
                 location.reload();

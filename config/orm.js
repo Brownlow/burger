@@ -85,6 +85,7 @@ var orm = {
             cb(result);
         });
     },
+    // Delete burgers from eaten
     delete: function(table, condition, cb) {
         var queryString = "DELETE " + table;
         queryString += " WHERE ";
