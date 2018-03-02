@@ -16,7 +16,10 @@ li{
 
 li button{
     float:right;
-    
+}
+
+.orderedBurgers{
+    padding-left:0;
 }
 
 .col-md-6{
@@ -32,12 +35,12 @@ form{
 form input {
     border:0;
     padding:5px;
+    width:300px;
+    font-family: Roboto, sans-serif;
 }
 
 form button {
     border:0;
-    border-radius:25px;
-    padding: 10px;
     margin-left: 20px;
 }
 

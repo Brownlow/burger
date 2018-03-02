@@ -6,13 +6,13 @@
             <form class="create-form">
             
               <div class="form-group">
-                <label for="burger">Burger Name:</label>
-                <input type="text" id="burger" name="name">
-                <button type="submit">Add Burger</button>
+                {{!-- <label for="burger">Burger Name:</label> --}}
+                <input type="text" id="burger" name="name" placeholder="Enter Burger Name">
+                <button type="submit" class="btn btn-warning">Add Burger</button>
               </div>
               
             </form>
-            <ul>
+            <ul class="orderedBurgers">
               {{#each burgers}}
                 {{#unless eaten}}
                   {{> burgers/burger-block eaten=true}}

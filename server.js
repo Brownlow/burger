@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var favicon = require('serve-favicon');
 
 var port = process.env.PORT || 3000;
 
@@ -20,6 +21,8 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgersController.js");
 
 app.use("/", routes);
+
+app.use(favicon(__dirname + '/public/assets/images/favicon.ico'));
 
 app.listen(port, function(){
 

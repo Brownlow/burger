@@ -13,13 +13,14 @@ $(function() {
             eaten: newEat
         };
 
-        if(newEatState.eaten === false){
+        if(!newEatState.eaten){
             // Send the DELETE request with REST API id's 
             $.ajax('/api/burgers/' + id, {
                 type: "DELETE"
             }).then(function(){
                 // Reload the page to get the updated list
                 location.reload();
+                console.log('deleted');
             });
         } else{
             // Send the PUT request with REST API id's 
@@ -27,8 +28,6 @@ $(function() {
                 type: "PUT",
                 data: newEatState
             }).then(function(){
-                
-            
                 // Reload the page to get the updated list
                 location.reload();
             });
