@@ -1,13 +1,17 @@
 var express = require("express");
+
 var bodyParser = require("body-parser");
-var favicon = require('serve-favicon');
 
 var port = process.env.PORT || 3000;
 
 var app = express();
 
+
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+// Custom Favicon 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,8 +25,6 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgersController.js");
 
 app.use("/", routes);
-
-app.use(favicon(__dirname + '/public/assets/images/favicon.ico'));
 
 app.listen(port, function(){
 
